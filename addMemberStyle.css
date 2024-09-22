@@ -1,0 +1,68 @@
+
+.row-box {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.glass{
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+}
+.body{
+  background-image: url(img/basic.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.input-container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-container input[type="text"] {
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #030000;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
